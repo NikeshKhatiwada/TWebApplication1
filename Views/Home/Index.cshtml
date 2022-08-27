@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <a href="/Home/Create" class="button is-pulled-right">Insert Data</a>
+    <div class="tile is-ancestor">
+        <div class="tile is-parent is-flex-wrap-wrap is-12">
+            @foreach(var Item in Model) {
+                <div class="tile is-6 has-fixed-size">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>First Name: @Item.FirstName</p>
+                                </td>
+                                <td>
+                                    <p>First Name: @Item.LastName</p>
+                                </td>
+                                <td>
+                                    <p>First Name: @Item.UserName</p>
+                                </td>
+                                <td>
+                                    <p>First Name: @Item.Email</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <a href="/Home/Edit?Id=@Item.Id">Edit Data</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <hr />
+</div>

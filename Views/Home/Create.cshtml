@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Insert Page";
+}
+
+<form method="post" action="/User/Insert">
+    <div class="text-center">
+        <h1 class="is-size-3 display-4">Insert Data</h1>
+        <div class="field">
+            <label class="label">First Name</label>
+            <div class="control">
+                <input id="FirstName" name="FirstName" class="input" type="text">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Last Name</label>
+            <div class="control">
+                <input id="LastName" name="LastName" class="input" type="text">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">UserName</label>
+            <div class="control">
+                <input id="UserName" name="UserName" class="input" type="text">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input id="Email" name="Email" class="input" type="email">
+            </div>
+        </div>
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link">Submit</button>
+            </div>
+            <div class="control">
+                <button class="button is-link is-light">Cancel</button>
+            </div>
+        </div>
+    </div>
+</form>
