@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using TWebApplicationMVC1.Data;
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<DbContext, ApplicationDbContext>();

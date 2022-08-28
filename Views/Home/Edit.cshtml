@@ -7,8 +7,8 @@
 
 
 <div class="text-center">
-        <h1 class="is-size-3 display-4">Update Data</h1>
-        <form method="post" action="/User/Update/@Model.Id">
+    <h1 class="is-size-3 display-4">Update Data</h1>
+    <form method="post" action="/User/Update/@Model.Id">
         <div class="field">
             <label class="label">First Name</label>
             <div class="control">
@@ -31,6 +31,12 @@
             <label class="label">Email</label>
             <div class="control">
                 <input id="Email" name="Email" class="input" value="@Model.Email" type="email">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Birth Date</label>
+            <div class="control">
+                <input id="BirthDate" name="BirthDate" class="input" value="@Model.BirthDate" type="datetime">
             </div>
         </div>
         <div class="field is-grouped">
