@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TWebApplicationMVC1.Migrations
 {
-    public partial class Initial3 : Migration
+    public partial class Initiall : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

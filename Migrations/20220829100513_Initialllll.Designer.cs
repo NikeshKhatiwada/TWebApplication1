@@ -12,8 +12,8 @@ using TWebApplicationMVC1.Data;
 namespace TWebApplicationMVC1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220828102050_Initial3")]
-    partial class Initial3
+    [Migration("20220829100513_Initialllll")]
+    partial class Initialllll
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace TWebApplicationMVC1.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("BirthDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -41,6 +41,9 @@ namespace TWebApplicationMVC1.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Image")
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
