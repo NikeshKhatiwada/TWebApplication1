@@ -13,6 +13,17 @@
                         <tbody>
                             <tr>
                                 <td>
+                                    <p>
+                                        Image:
+                                        @if (Item.Image != null)
+                                        {
+                                            <figure class="image is-128x128 is-square mt-3 mb-3">
+                                                <img src="/Images/@Item.Image" alt="@Item.UserName image">
+                                            </figure>
+                                        }
+                                    </p>
+                                </td>
+                                <td>
                                     <p>First Name: @Item.FirstName</p>
                                 </td>
                                 <td>
@@ -25,7 +36,7 @@
                                     <p>Email: @Item.Email</p>
                                 </td>
                                 <td>
-                                    <p>BirthDate: @Item.BirthDate</p>
+                                    <p>BirthDate: @Item.BirthDate.ToString("yyyy-MM-dd")</p>
                                 </td>
                             </tr>
                         </tbody>

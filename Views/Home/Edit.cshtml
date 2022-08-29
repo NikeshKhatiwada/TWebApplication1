@@ -36,7 +36,7 @@
         <div class="field">
             <label class="label">Birth Date</label>
             <div class="control">
-                <input id="BirthDate" name="BirthDate" class="input" value="@Model.BirthDate" type="date">
+                <input id="BirthDate" name="BirthDate" class="input" value="@Model.BirthDate.ToString("yyyy-MM-dd")" type="date">
             </div>
         </div>
         <div class="field is-grouped">
@@ -57,3 +57,30 @@
         </div>
     </form>
 </div>
+<hr />
+<form method="post" runat="server" EncType="multipart/form-data" action="/User/UpdateImage">
+    <div class="text-center">
+        <h1 class="is-size-3 display-4">Change Image</h1>
+    </div>
+    <input id="Id" name="Id" value="@Model.Id" class="input is-hidden" type="number">
+    <div class="field">
+        <div class="file">
+            <label class="file-label">
+                <input class="file-input" id="Image" name="Image" type="file" accept=".jpg, .png">
+                <span class="file-cta">
+                    <span class="file-icon">
+                        <i class="gg-software-upload"></i>
+                    </span>
+                    <span class="file-label">
+                        Choose a file…
+                    </span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-link">Submit</button>
+        </div>
+    </div>
+</form>
