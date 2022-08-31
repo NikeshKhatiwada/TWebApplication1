@@ -63,7 +63,7 @@ namespace TWebApplicationMVC1.Controllers
             Users users = this.Context.Users.Find(Id);
             string deletePath = Path.Combine(".\\wwwroot", "Images");
             string fileDeletePath = Path.Combine(uploadPath, users.Image);
-            FileInfo deleteFile = new FileInfo(deletePath);
+            FileInfo deleteFile = new FileInfo(fileDeletePath);
             if (deleteFile.Exists)
             {
                 deleteFile.Delete();
